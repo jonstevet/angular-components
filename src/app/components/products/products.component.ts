@@ -10,7 +10,7 @@ import { ProductsService } from '../../services/products.service';
 })
 export class ProductsComponent implements OnInit {
   cart: Product[] = [];
-  cartTotal:number = 0;
+  cartTotal = 0;
   today = new Date();
   date = new Date(2022, 2, 26);
 
