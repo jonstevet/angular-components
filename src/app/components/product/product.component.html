@@ -1,0 +1,7 @@
+<div class="product">
+  <app-img [img]="product.image"></app-img>
+  <h2 class="productName">{{product.title | acotar | lowercase}}</h2>
+  <h3 class="productPrice">{{product.price | currency:'$'}}</h3>
+  <!-- <p class="productDescription">${{product.description}}</p> -->
+  <button (click)="onAddToCart()">Add cart</button>
+</div>

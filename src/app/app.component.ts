@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-store';
+  imgParent = 'https://picsum.photos/200';
+  showImg = true;
+
+
+  onLoaded(img:string){
+    console.log('Image father loaded ok', img);
+  }
+
+  toggleImg(){
+    this.showImg = !this.showImg;
+  }
 }

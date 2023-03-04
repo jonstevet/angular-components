@@ -1,1 +1,8 @@
-<p>img works!</p>
+<img class="productImage" (load)="imgLoaded()" (error)="imgError()" [src]="image" alt="product image" *ngIf="image; else elseImg">
+<ng-template #elseImg>
+  <img class="productImage" [src]="noImage" alt="no image">
+</ng-template>
+
+<!-- <h3>{{counter}}</h3> -->
+
+

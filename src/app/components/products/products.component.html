@@ -1,0 +1,13 @@
+<div class="productsContainer">
+  <app-product
+  [product]="product"
+  *ngFor="let product of products"
+  (addedProduct)="onAddedProduct($event)">
+</app-product>
+</div>
+<div><p>{{cart.length}} Items en carrito por ${{cartTotal}}</p></div>
+<div>
+  <p>Today: {{today | date: 'short'}}</p>
+  <p>Otra fecha: {{date | date:'dd.MM.yyyy' }}</p>
+  <p>{{'esto es un texto escrito en minusculas' | reverse}}</p>
+</div>
