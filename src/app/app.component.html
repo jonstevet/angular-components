@@ -3,4 +3,11 @@
 <button (click)="toggleImg()">Toggle image</button>
 <p>{{showImg}}</p> -->
 <app-navbar></app-navbar>
-<app-products></app-products>
+<router-outlet></router-outlet>
+<!-- <p><a href="../assets/public/text.txt" download>Descarga</a></p> -->
+<!-- <p>
+  <button (click)="downloadFile()">Descargar text</button>
+  <input type="file" (change)="onUpload($event)">
+  <img *ngIf="imgRta" [src]="imgRta" alt="imagen subida">
+</p>
+<app-products></app-products> -->

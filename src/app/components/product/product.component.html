@@ -1,7 +1,10 @@
-<div appHighlight class="product">
-  <app-img [img]="product.image"></app-img>
+<div appHighlight (click)="onShowProductDetailChild()" class="product">
+  <a [routerLink]="['/product/', product.id]">
+    <app-img [img]="product.images[0]"></app-img>
+  </a>
   <h2 class="productName">{{product.title | acotar | lowercase}}</h2>
   <h3 class="productPrice">{{product.price | currency:'$'}}</h3>
   <!-- <p class="productDescription">${{product.description}}</p> -->
   <button (click)="onAddToCart()">Add cart</button>
+  <a [routerLink]="['.']" [queryParams]="{product: product.id}">Details</a>
 </div>

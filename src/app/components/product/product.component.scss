@@ -1,25 +1,26 @@
 .product{
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin: 10px;
-    width: 200px;
-    height: 300px;
-    text-align: center;
-    box-shadow: 0 0 10px #ccc;
-    display: inline-block;
-    vertical-align: top;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 10px;
+  width: 200px;
+  height: 280px;
+  text-align: center;
+  box-shadow: 0 0 10px #ccc;
+  display: inline-block;
+  vertical-align: top;
+
 
   .productName{
-      color: #f30910;
-      font-size: 18px;
-      text-align: inherit;
-      margin: 0;
+    color: #f30910;
+    font-size: 18px;
+    text-align: inherit;
+    margin: 0;
   }
 
   .productPrice{
-      color: #ee060e;
-      font-size: 16px;
-      text-align: right;
-      margin: 0;
+    color: #ee060e;
+    font-size: 16px;
+    text-align: right;
+    margin: 0;
   }
 }

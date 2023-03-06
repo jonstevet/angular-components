@@ -1,13 +1,31 @@
+<button (click)="createNewProduct()" >crear producto</button>
+
 <div class="productsContainer">
   <app-product
   [product]="product"
   *ngFor="let product of products"
-  (addedProduct)="onAddedProduct($event)">
+  (addedProduct)="onAddedProduct($event)"
+  (showProduct)="onShowProductDetail($event)">
 </app-product>
 </div>
+
 <div><p>{{cart.length}} Items en carrito por ${{cartTotal}}</p></div>
-<div>
+<div><button (click)="loadMoreProducts()">more products</button></div>
+
+<!-- <div>
   <p>Today: {{today | date: 'short'}}</p>
   <p>Otra fecha: {{date | date:'dd.MM.yyyy' }}</p>
   <p>{{'esto es un texto escrito en minusculas' | reverse}}</p>
+</div> -->
+<div class="productDetail" [class.active]="showProductDetail">
+  <div>
+    <button class="clouseButtonProductDetail" (click)="toggleProductDetail()">Close</button>
+    <img src="{{productToShow.images[0]}}">
+    <h1>{{productToShow.title}}</h1>
+    <h2>{{productToShow.price | currency:'COP $'}}</h2>
+    <p>{{productToShow.description}}</p>
+    <button>Buy</button>
+    <button (click)="updateProduct()">Edit</button>
+    <button (click)="deleteProduct()">Delete</button>
+  </div>
 </div>

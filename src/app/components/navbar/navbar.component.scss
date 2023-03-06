@@ -51,8 +51,15 @@
         text-decoration: none;
         display: block;
         transition: 0.3s;
-        a:hover {
+        padding: 0.2em, 0.8em;
+        &:hover {
           color: rgb(22, 233, 14);
+        }
+        &.linkActive{
+          border: 1px solid rgb(176, 253, 173);
+          background-color: rgb(41, 119, 38);
+          color: rgb(176, 253, 173);
+          border-radius: 5px;
         }
       }
     }
@@ -87,6 +94,15 @@
         margin: 0 0.4em;
         color: inherit;
         text-decoration: none;
+        &:hover {
+          color: rgb(22, 233, 14);
+        }
+        &.linkActive{
+          border: 1px solid rgb(52, 255, 1);
+          background-color: rgb(192, 255, 190);
+          color: rgb(0, 145, 7);
+          border-radius: 5px;
+        }
       }
     }
   }

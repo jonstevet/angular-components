@@ -1,0 +1,17 @@
+<div *ngIf="product" class="pageProductDetail">
+  <button (click)="productDetailBack()">Back</button>
+  <div>
+    <div class="productImage">
+      <img *ngIf="product; else noimage" [src]="product.images[0]" alt="product image" />
+      <ng-template #noimage>
+        <img [src]="noImage" alt="no image">
+      </ng-template>
+    </div>
+    <div class="productInfo">
+      <h1>{{product.title}}</h1>
+      <h1>{{product.price | currency:'COP $'}}</h1>
+      <p>{{product.description}}</p>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+</div>
